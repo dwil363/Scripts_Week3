@@ -16,8 +16,8 @@ You can print the value of a variable by using `echo` and prefacing the name of 
 
 In general, bash isn't very good for mathematical operations, but it can be done in several ways. Probably the easiest is to wrap a mathematical expression in _double_ parentheses and precede it with a `$`, since you pretty much always want the _value_ of the mathematical result.
 
-- `echo $(( 2 + 2 ))`
-  - `myNum = $(( 2 + 2 ))`
+- `echo $(( 2 + 2 ))` (tells the result but does not save)
+  - `myNum=$(( 2 + 2 ))` (saves)
 - `echo $(( 3 * 6 ))`
 - `echo $(( 20 / 3 ))`
 - `echo $(( 20 % 3 ))`
@@ -58,6 +58,7 @@ Sometimes you may want to see if a certain text pattern exists in a file without
 For instance, to search for the string `five` in the file `test.txt`, we could use
 
 `grep five test.txt`
+grep []- can put a range of numbers looking for specifically 
 
 Take a look at the output. Note that the _entire_ line containing five is returned and not just the string itself.
 
@@ -104,7 +105,7 @@ As usual, this output is printed to the screen by default. But it can also be re
 Sometimes we need to use or store the output from a (series of) bash command(s), but a pipe won't accomplish what we need. One of these cases is storing output from commands in a variable. In this case, we can wrap the bash commands with backticks to indicate that they should be executed first, and the resulting value should be stored in the variable
 
 ```
-myVariable=`ls | head -n1`
+myVariable=`ls | head -n1` (backticks tell it to execute the command within the backticks and then assign that value to the variable)
 ```
 
 ## Parsing File Contents
