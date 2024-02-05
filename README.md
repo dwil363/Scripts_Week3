@@ -125,7 +125,7 @@ To print both the first and third columns, we could do this
 
 You'll often need to clean up the contents of data files before doing additional analyses. In this case, we'd like to replace commas with spaces. To do this from the command line, we can use a powerful tool called `sed`. `sed`, which is short for "stream editor", can do many different things, but we'll just use it for simple find-and-replace for now. Try executing this
 
-`sed 's/,/ /g' chiari.summary_statistics.csv`
+`sed 's/,/ /g' chiari.summary_statistics.csv` (Within first set of slashes is what you are going to replace and within second set of slashes is what you want to replace it with)
 
 What do you see? What's different compared to the original contents of the file?
 
